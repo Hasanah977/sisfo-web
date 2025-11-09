@@ -1,0 +1,59 @@
+/* Reset sederhana agar tampilan lebih konsisten */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+
+
+/* Container untuk memberi jarak pinggir */
+.container { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+
+
+/* Header / Navbar */
+.site-header { background: #0b74de; color: white; }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; }
+.logo { font-weight: 700; text-decoration: none; color: white; }
+.nav { display: block; }
+.nav ul { list-style: none; display: flex; gap: 1rem; }
+.nav a { color: white; text-decoration: none; padding: .5rem; }
+.nav-toggle { display: none; background: transparent; border: none; color: white; font-size: 1.25rem; }
+
+
+/* Hero */
+.hero { padding: 4rem 0; background: linear-gradient(90deg, #e6f0ff 0%, #ffffff 100%); text-align: center; }
+.hero h1 { font-size: 2rem; margin-bottom: .5rem; }
+.hero p { margin-bottom: 1rem; }
+.btn { display: inline-block; padding: .6rem 1rem; background: #0066cc; color: white; text-decoration: none; border-radius: 8px; }
+.btn-outline { display: inline-block; padding: .5rem .9rem; border: 2px solid #0066cc; border-radius: 8px; text-decoration: none; }
+
+
+/* Features */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+
+
+/* CTA */
+.cta { text-align: center; padding: 2rem 0; }
+
+
+/* About */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.team-card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+
+
+/* Contact form */
+.contact-page form { max-width: 600px; }
+.contact-page label { display:block; margin-top: .75rem; }
+.contact-page input, .contact-page textarea { width: 100%; padding: .6rem; margin-top: .25rem; border: 1px solid #ccc; border-radius: 6px; }
+.form-feedback { margin-top: .75rem; color: green; }
+
+
+/* Footer */
+.site-footer { background: #0b74de; color: white; padding: 1rem 0; margin-top: 2rem; }
+
+
+/* Responsive: sembunyikan nav dan tampilkan tombol toggle pada layar kecil */
+@media (max-width: 720px) {
+.nav { display: none; }
+.nav-toggle { display: inline-block; }
+.nav.open { display: block; }
+.nav ul { flex-direction: column; gap: 0; }
+}
